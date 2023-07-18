@@ -21,22 +21,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            InstagramProfileCard()
+            FirstComposeProjectTheme{
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(MaterialTheme.colors.background)
+                ) {
+
+                }
+                InstagramProfileCard()
+            }
         }
     }
 }
 
-@Preview
-@Composable
-fun CardTest(){
-    Card(
-        shape = RoundedCornerShape(4.dp),
-        border = BorderStroke(1.dp,Color.Black)
-    ) {
 
-    }
-
-}
 
 
 
